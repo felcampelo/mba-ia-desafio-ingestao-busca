@@ -20,7 +20,17 @@ PG_VECTOR_COLLECTION_NAME = os.getenv("PG_VECTOR_COLLECTION_NAME", "pdf_chunks")
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 150
 
+
+def _validate_database_url(database_url: str) -> None:
+    if database_url.startswith(("http://", "https://")):
+        raise ValueError(
+            "DATABASE_URL invalido. Use uma URL PostgreSQL, por exemplo: "
+            "postgresql+psycopg://postgres:postgres@localhost:5432/rag"
+        )
+
 def ingest_pdf():
+    _validate_database_url(DATABASE_URL)
+
     pdf_file = Path(PDF_PATH)
 
     if not pdf_file.exists():
