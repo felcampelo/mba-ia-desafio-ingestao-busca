@@ -34,7 +34,7 @@ RESPONDA A "PERGUNTA DO USUÁRIO"
 """
 
 OPENAI_EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
-OPENAI_CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
+OPENAI_CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-5-nano")
 DATABASE_URL = os.getenv(
   "DATABASE_URL", "postgresql+psycopg://postgres:postgres@localhost:5432/rag"
 )
