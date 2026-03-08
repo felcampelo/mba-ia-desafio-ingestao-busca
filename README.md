@@ -1,9 +1,28 @@
 # Desafio MBA Engenharia de Software com IA - Full Cycle
 
 Este projeto implementa um fluxo simples de RAG com PDF + PostgreSQL/pgVector.
-## Como executar
 
-1. Subir o banco PostgreSQL com pgVector
+## Fonte de Dados
+Nesse projeto foi utilizado um pdf com dados de manutenções elétricas.
+
+Exemplos de pergunta:
+ O que é um Relé de gás atuado?
+ O que é Sobreaquecimento excessivo nos conectores?
+ Quais os benefíciso do da TERMOGRAFIA?
+
+## Configurando ambiente PYTHON
+
+1. Rodar o comando: 
+python3 -m venv venv source venv/bin/activate (instale o python antes caso não tenha :P)
+
+2. Instalar as dependências:
+pip install -r requirements.txt
+
+3. Duplique o arquivo .env.example e renomeie para .env
+
+## Como executar o projeto
+
+1. Subir o banco PostgreSQL com pgVector rodando o comando abaixo:
 
 ```bash
 docker compose up -d
