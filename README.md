@@ -4,6 +4,7 @@ Este projeto implementa um fluxo simples de RAG com PDF + PostgreSQL/pgVector.
 
 ## Fonte de Dados
 Nesse projeto foi utilizado um pdf com dados de manutenções elétricas.
+Utilizei a LLM Da Open AI para essa atividade.
 
 Exemplos de pergunta:
  O que é um Relé de gás atuado?
@@ -54,5 +55,7 @@ python src/chat.py
 source/Scripts/python.exe src/ingest.py
 source/Scripts/python.exe src/chat.py
 ```
+
+- Forneça as chaves da OPEN_AI no arquivo .env.
 
 - Para encerrar o chat, digite `/sair`.
